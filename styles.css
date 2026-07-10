@@ -283,7 +283,7 @@ html[lang="en"] [lang="nl"]{ display:none !important; }
 /* ---------- project cards ---------- */
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns:repeat(auto-fill, minmax(min(100%, 320px), 1fr));
   gap:28px;
 }
 .card{
@@ -415,19 +415,73 @@ html[lang="en"] [lang="nl"]{ display:none !important; }
 }
 
 /* ---------- responsive ---------- */
+
+/* tablet + mobile — nav collapses, general vertical rhythm tightens */
 @media (max-width: 760px){
+  .wrap{ padding:0 20px; }
+
+  .site-head .bar{ padding:14px 20px; }
+  .header-right{ gap:10px; }
   .nav{
     display:none;
     position:absolute; top:100%; left:0; right:0;
     flex-direction:column; gap:0;
     background:var(--panel); border-bottom:1px solid var(--line);
-    padding:8px 24px 16px;
+    padding:8px 20px 16px;
   }
   .nav.open{ display:flex; }
   .nav a{ padding:12px 0; border-bottom:none; }
   .nav-toggle{ display:block; }
+
   .split{ grid-template-columns:1fr; gap:40px; }
-  .hero{ padding:64px 0 56px; }
+  .section{ padding:56px 0; }
+  .section-head{ margin-bottom:28px; gap:12px; }
+  .hero{ padding:56px 0 40px; }
+  .lead{ font-size:1.05rem; }
+  .cards{ gap:20px; }
+  .card .body{ padding:18px 18px 22px; }
+
+  /* project detail pages */
+  .project-hero{ padding:56px 0 32px; }
+  .meta-grid{ margin:28px 0; }
+  .meta-grid > div{ padding:14px 16px; }
+  .prose h2{ margin:36px 0 12px; }
+  .prose h3{ margin:24px 0 10px; }
+  .prose pre{ font-size:0.76rem; padding:14px; }
+  .figure{ margin:24px 0; }
+  .pager{ margin-top:44px; padding-top:24px; gap:12px; }
+
+  /* contact block */
+  .contact-block .big-link{ margin:8px 0 20px; }
+
+  /* footer */
+  .site-foot{ margin-top:48px; }
+  .site-foot .inner{ padding:24px 20px; gap:6px 24px; }
+}
+
+/* small phones — tighten header, drop wrap padding, kill big margins */
+@media (max-width: 480px){
+  .wrap{ padding:0 16px; }
+  .site-head .bar{ padding:12px 16px; }
+  .header-right{ gap:8px; }
+  .theme-toggle{ width:34px; height:34px; }
+  .theme-toggle svg{ width:16px; height:16px; }
+  .lang-toggle{ height:34px; padding:0 8px; font-size:0.68rem; }
+  .nav-toggle{ padding:6px 10px; font-size:0.72rem; }
+  .logo{ font-size:0.85rem; }
+
+  .section{ padding:44px 0; }
+  .hero{ padding:44px 0 32px; }
+  .hero .meta-row{ margin:20px 0 24px; gap:8px 20px; }
+  .btn{ padding:11px 18px; font-size:0.76rem; }
+  .btn-row{ gap:10px; }
+
+  .project-hero{ padding:44px 0 24px; }
+  .project-hero h1{ font-size:clamp(2rem, 8vw, 3rem); }
+  h2{ font-size:clamp(1.5rem, 5vw, 2rem); }
+
+  .site-foot .inner{ padding:20px 16px; flex-direction:column; align-items:flex-start; }
+  .pager{ font-size:0.72rem; }
 }
 
 /* ============================================================
