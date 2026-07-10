@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-title-nl="Multi-Agent Python Tutor - Thibault Verrue" data-title-en="Multi-Agent Python Tutor - Thibault Verrue">Multi-Agent Python Tutor - Thibault Verrue</title>
+  <meta name="description"
+        data-title-nl="Curriculum-bewust AI-tutorsysteem gedeployed als Discord-bot."
+        data-title-en="Curriculum-aware AI tutoring system deployed as a Discord bot."
+        content="Curriculum-aware AI tutoring system deployed as a Discord bot." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M2 2h10 M2 2v10 M30 2h-10 M30 2v10 M2 30h10 M2 30v-10 M30 30h-10 M30 30v-10' stroke='%232B4BE6' stroke-width='4' fill='none'/><circle cx='16' cy='16' r='3' fill='%232B4BE6'/></svg>" />
+  <meta name="theme-color" content="#F3F5F4" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0A0E13" media="(prefers-color-scheme: dark)" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Multi-Agent Python Tutor - Thibault Verrue" />
+  <meta property="og:description" content="Curriculum-aware AI tutoring system deployed as a Discord bot." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Multi-Agent Python Tutor" />
+  <meta name="twitter:description" content="Curriculum-aware AI tutoring system deployed as a Discord bot." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+      var l = localStorage.getItem('lang') || (navigator.language && navigator.language.toLowerCase().startsWith('nl') ? 'nl' : 'en');
+      document.documentElement.setAttribute('lang', l);
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div id="tsparticles" aria-hidden="true"></div>
+
+  <header class="site-head">
+    <div class="bar">
+      <a class="logo" href="index.html">thibault<b>.verrue</b></a>
+      <div class="header-right">
+        <nav class="nav" id="nav">
+          <a href="index.html"><span lang="nl">Home</span><span lang="en">Home</span></a>
+          <a href="projects.html" aria-current="page"><span lang="nl">Projecten</span><span lang="en">Projects</span></a>
+          <a href="about.html"><span lang="nl">Over mij</span><span lang="en">About</span></a>
+          <a href="mailto:thibaultverrue@gmail.com">Contact</a>
+        </nav>
+        <button class="lang-toggle" data-aria-nl="Switch to English" data-aria-en="Overschakelen naar Nederlands" aria-label="Switch to English"><span lang="nl">EN</span><span lang="en">NL</span></button>
+        <button class="theme-toggle" data-aria-nl="Wissel tussen licht en donker" data-aria-en="Switch theme" aria-label="Wissel tussen licht en donker" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav" data-aria-nl="Menu openen" data-aria-en="Open menu">menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="project-hero">
+      <span class="mono eyebrow">// project.load("multi_agent_python_tutor")</span>
+      <h1>Multi-Agent Python Tutor</h1>
+      <p class="lead" style="margin-top:20px;"><span lang="nl">Mijn bachelorproef: een curriculum-bewust AI-tutorsysteem dat draait als Discord-bot. Meerdere geörchestreerde agents geven gestructureerde Python-lessen, genereren oefeningen, evalueren ingediende code en passen de instructie aan de voortgang van elke leerling aan.</span><span lang="en">My bachelor thesis: a curriculum-aware AI tutoring system running as a Discord bot. Multiple orchestrated agents deliver structured Python lessons, generate exercises, evaluate submitted code and adapt instruction to each learner's progress.</span></p>
+      <div class="meta-grid mono">
+        <div><span class="k"><span lang="nl">Rol</span><span lang="en">Role</span></span><span class="v"><span lang="nl">Solo developer</span><span lang="en">Solo developer</span></span></div>
+        <div><span class="k"><span lang="nl">Periode</span><span lang="en">Timeline</span></span><span class="v"><span lang="nl">feb 2026 - jun 2026</span><span lang="en">Feb 2026 - Jun 2026</span></span></div>
+        <div><span class="k"><span lang="nl">Context</span><span lang="en">Context</span></span><span class="v"><span lang="nl">Bachelorproef, Howest CT &amp; AI</span><span lang="en">Bachelor thesis (BP), Howest CT &amp; AI</span></span></div>
+        <div><span class="k">Stack</span><span class="v">LangGraph, FastAPI, Groq (Llama 3.1), discord.py</span></div>
+      </div>
+      <div class="btn-row">
+        <a class="btn" href="https://github.com/ThibVerr/ai-tutor-bot" target="_blank" rel="noopener"><span lang="nl">Broncode op GitHub</span><span lang="en">Source on GitHub</span></a>
+      </div>
+    </section>
+
+    <article class="prose">
+
+      <h2><span lang="nl">Het probleem</span><span lang="en">The problem</span></h2>
+      <p><span lang="nl">Generieke chatbots kunnen Python-vragen beantwoorden, maar ze geven geen les: geen curriculum, geen geheugen van wat je al beheerst, geen oefeningen op jouw niveau, geen structuur om je door de stof te loodsen. Ik wilde onderzoeken of een multi-agent architectuur binnen een Discord-bot een echte, zelfsturende leerervaring kan bieden — in plaats van een reactieve assistent te blijven. Het werd de onderzoeksvraag van mijn bachelorproef: <em>&ldquo;Hoe kan een multi-agent, agentic AI-systeem geïmplementeerd worden binnen een Discord-bot om zelfsturend programmeeronderwijs autonoom te begeleiden via natuurlijke taal?&rdquo;</em></span><span lang="en">Generic chatbots can answer Python questions, but they don't teach: no curriculum, no memory of what you've mastered, no exercises matched to your level, no structure to guide you through the material. I wanted to investigate whether a multi-agent architecture inside a Discord bot could deliver a real, self-directed learning experience — instead of remaining a reactive assistant. That became my thesis research question: <em>&ldquo;How can a multi-agent, agentic AI system be implemented within a Discord bot to autonomously guide self-directed programming education through natural-language interaction?&rdquo;</em></span></p>
+
+      <h2><span lang="nl">De aanpak</span><span lang="en">The approach</span></h2>
+      <p><span lang="nl">Ik heb het systeem opgebouwd in vier lagen: een Discord-frontend, een FastAPI-backend, een LangGraph multi-agent orchestratielaag en een aparte code-executie-omgeving. De Discord-bot beheert per gebruiker een eigen les- en statuskanaal en stuurt berichten door naar de backend, die de sessiestate bijhoudt en de juiste agent aan het werk zet.</span><span lang="en">I built the system in four layers: a Discord frontend, a FastAPI backend, a LangGraph multi-agent orchestration layer, and a separate code-execution environment. The Discord bot maintains per-user lesson and status channels and forwards messages to the backend, which tracks session state and dispatches the right agent.</span></p>
+      <p><span lang="nl">De kern is een netwerk van zeven gespecialiseerde agents, gecoördineerd door LangGraph:</span><span lang="en">The core is a network of seven specialised agents coordinated by LangGraph:</span></p>
+      <ul>
+        <li><span lang="nl"><strong>Intent</strong> classificeert wat de gebruiker wil (lesgeven, oefening, curriculumaanpassing, hulpvraag, ...)</span><span lang="en"><strong>Intent</strong> classifies what the user wants (learn, exercise, curriculum change, question, …)</span></li>
+        <li><span lang="nl"><strong>Router</strong> stuurt de state naar de juiste specialist op basis van de gedetecteerde intentie</span><span lang="en"><strong>Router</strong> dispatches to the right specialist based on the detected intent</span></li>
+        <li><span lang="nl"><strong>Curriculum</strong> genereert en beheert dynamisch de topic-lijst — de gebruiker kan onderwerpen toevoegen, verwijderen, herordenen of skippen</span><span lang="en"><strong>Curriculum</strong> generates and maintains the topic list dynamically — the user can add, remove, reorder or skip topics</span></li>
+        <li><span lang="nl"><strong>Instruction</strong> levert de les stap voor stap</span><span lang="en"><strong>Instruction</strong> delivers the lesson step by step</span></li>
+        <li><span lang="nl"><strong>Help</strong> beantwoordt vervolgvragen tijdens de les zonder de leservaring te verstoren</span><span lang="en"><strong>Help</strong> answers follow-up questions during a lesson without breaking the lesson flow</span></li>
+        <li><span lang="nl"><strong>Exercise</strong> genereert oefeningen die passen bij het huidige topic en niveau</span><span lang="en"><strong>Exercise</strong> generates exercises matched to the current topic and level</span></li>
+        <li><span lang="nl"><strong>Evaluator</strong> voert de ingediende code uit in de sandbox, vergelijkt met verwachte output en genereert gerichte feedback</span><span lang="en"><strong>Evaluator</strong> runs submitted code in the sandbox, compares against expected output and generates targeted feedback</span></li>
+      </ul>
+      <p><span lang="nl">Alle agents draaien op <code>llama-3.1-8b-instant</code> via Groq, gekozen voor snelheid boven ruwe capaciteit — latency is doorslaggevend in een Discord-conversatie. Elke prompt volgt hetzelfde patroon (rol → context → regels → outputformaat), en de temperatuur verschilt bewust per taak: 0 voor JSON-output (curriculum, oefeninggeneratie, intent), 0.1–0.4 voor natuurlijke tekst zodat herhaalde interacties niet identiek voelen. JSON-prompts bevatten een expliciete schema-instructie plus een regex-extractie in Python als vangnet — die combinatie maakte de gestructureerde output betrouwbaar in de praktijk.</span><span lang="en">All agents run on <code>llama-3.1-8b-instant</code> via Groq, chosen for speed over raw capability — latency matters more than benchmark quality in a Discord conversation. Every prompt follows the same pattern (role → context → rules → output format), and temperature varies deliberately by task: 0 for JSON-emitting agents (curriculum, exercise generation, intent), 0.1–0.4 for natural-language agents so repeated interactions don't feel identical. JSON prompts embed an explicit schema plus a regex fallback in Python — that combination made structured output reliable in practice.</span></p>
+      <p><span lang="nl">Bewust géén gebruik gemaakt van LLM-native tool calling of MCP. Het model genereert alleen tekst; alle uitvoering (sandbox, curriculum-updates, sessie-state, progressie-opslag) gebeurt in de omringende Python-code. LangGraph bepaalt op basis van de sessie-state welk agent-knooppunt draait. De koppeling tussen prompttekst en code is soms strak — de evaluator moet bijvoorbeeld letterlijk de zin <code>you are ready!</code> uitspreken voor de Python-code een oefening als geslaagd markeert — maar die expliciete triggerzin voorkomt dubbelzinnige pass/fail-detectie.</span><span lang="en">Deliberately no LLM-native tool calling or MCP. The model only generates text; all execution (sandbox, curriculum updates, session state, progress storage) lives in the surrounding Python code. LangGraph decides which agent node runs based on session state. The coupling between prompt wording and code logic is sometimes tight — the evaluator must literally emit the trigger phrase <code>you are ready!</code> before the Python code marks an exercise as passed — but that explicit contract avoids ambiguous pass/fail detection.</span></p>
+    <figure class="figure">
+      <video controls preload="metadata" playsinline>
+        <source src="media/python-tutor-demo.mp4" type="video/mp4" />
+        <span lang="nl">Je browser ondersteunt geen video-tag.</span><span lang="en">Your browser does not support the video tag.</span>
+      </video>
+      <figcaption class="mono"><span lang="nl">Demo: de multi-agent tutor geeft een les, genereert een oefening en beoordeelt de ingediende code in Discord.</span><span lang="en">Demo: the multi-agent tutor teaches a lesson, generates an exercise and grades the submitted code in Discord.</span></figcaption>
+    </figure>
+
+      <h2><span lang="nl">Het resultaat</span><span lang="en">The result</span></h2>
+      <p><span lang="nl">Een werkend prototype dat aantoont dat een multi-agent architectuur zelfsturend programmeeronderwijs kan ondersteunen: het genereert dynamisch een curriculum op basis van de leerdoelen, geeft les stap voor stap, laat de leerling het curriculum tijdens de sessie aanpassen, genereert oefeningen op maat van het huidige topic, voert code uit en geeft directe, gerichte feedback. De positionering zit doelbewust tussen statische e-learning en generieke chatbots: meer structuur dan een chatbot (curriculum, progressie, evaluatie), meer flexibiliteit dan een klassieke cursus.</span><span lang="en">A working prototype that demonstrates a multi-agent architecture can support self-directed programming education: it dynamically generates a curriculum from the learner's goals, delivers lessons step by step, lets the learner reshape the curriculum mid-session, generates topic-matched exercises, executes code and returns immediate, targeted feedback. It deliberately sits between static e-learning and generic chatbots — more structure than a chatbot (curriculum, progress, evaluation), more flexibility than a classical course.</span></p>
+      <p><span lang="nl">Interessante emergente eigenschappen: het systeem <em>weigert</em> off-topic verzoeken (routers fallback-pad), en jailbreak-pogingen worden als &ldquo;niet-begrepen&rdquo; behandeld — niet door expliciete guardrails, maar omdat de intent classifier de adversariële input simpelweg niet matcht op een bekende intentie. Dat is geen robuuste beveiliging (de thesis erkent dit expliciet), maar het is een aardig neveneffect van de architectuur.</span><span lang="en">Interesting emergent behaviours: the system <em>refuses</em> off-topic requests via the router's fallback, and jailbreak attempts get treated as &ldquo;not understood&rdquo; — not through explicit guardrails, but because the intent classifier fails to match adversarial input to any known intent. Not robust security (the thesis is honest about this), but a nice side effect of the architecture.</span></p>
+
+      <h2><span lang="nl">Wat ik geleerd heb</span><span lang="en">What I learned</span></h2>
+      <p><span lang="nl"><strong>Sterkere modellen leveren niet automatisch een beter product.</strong> In de praktijk hadden consistentie, snelheid en het ontwerp van de workflow meer impact dan pure benchmark-intelligentie. Een klein, snel model met een strakke prompt-structuur en duidelijke code-side contracten deed het beter dan &ldquo;gewoon GPT-4 erop plakken&rdquo; ooit had gedaan.</span><span lang="en"><strong>Stronger models don't automatically make a better product.</strong> In practice, consistency, speed and workflow design mattered more than raw benchmark intelligence. A small, fast model with a tight prompt structure and clear code-side contracts outperformed anything &ldquo;just glue GPT-4 on it&rdquo; would have delivered.</span></p>
+      <p><span lang="nl"><strong>Educatieve kwaliteit vraagt bewuste structuur.</strong> Zonder curriculum, prerequisite-logica en progressiebeheer verwordt zelfs een krachtig conversatiemodel tot een reactieve assistent. Structuur was het verschil tussen &ldquo;een chatbot die Python-vragen beantwoordt&rdquo; en &ldquo;een tutor die je door de stof leidt.&rdquo;</span><span lang="en"><strong>Educational quality requires deliberate structure.</strong> Without curriculum, prerequisite logic and progress management, even a powerful conversational model collapses into a reactive assistant. Structure was the difference between &ldquo;a chatbot that answers Python questions&rdquo; and &ldquo;a tutor that walks you through the material.&rdquo;</span></p>
+      <p><span lang="nl"><strong>Iteratief testen is niet optioneel.</strong> Veel ontwerpbeslissingen — de exacte triggerzin van de evaluator, de temperatuur per agent, de fallback van de router — werden pas duidelijk na echte interacties. Papieren ontwerpkeuzes overleven zelden het eerste contact met een echte gebruiker.</span><span lang="en"><strong>Iterative testing isn't optional.</strong> Many design decisions — the evaluator's exact trigger phrase, per-agent temperature, the router's fallback behaviour — only became clear after real interactions. Paper design choices rarely survive first contact with a real user.</span></p>
+      <p><span lang="nl"><strong>Eerlijk zijn over de grenzen.</strong> De sandbox is niet echt geïsoleerd — code draait in het host-proces met volledige builtins. Voor een onderzoeksprototype prima; voor productie ontoereikend. Ook de schaal-eigenschappen zijn niet gevalideerd voorbij één gebruiker, en het systeem antwoordt uitsluitend in het Engels ongeacht de input-taal. Deze beperkingen zijn expliciet gedocumenteerd in de thesis, met concrete aanbevelingen voor containerized execution, een persistente database, en een LLM-router voor provider-onafhankelijkheid.</span><span lang="en"><strong>Being honest about the edges.</strong> The sandbox isn't truly isolated — code runs in the host process with full builtins. Fine for a research prototype; not fit for production. Scalability beyond a single user is unvalidated, and the system replies only in English regardless of input language. These limitations are explicitly documented in the thesis, alongside concrete recommendations for containerised execution, a persistent database, and an LLM router for provider independence.</span></p>
+
+    </article>
+
+    <nav class="pager mono">
+      <a href="projects.html"><span lang="nl">&larr; Alle projecten</span><span lang="en">&larr; All projects</span></a>
+      <a href="project-waste-sorting.html"><span lang="nl">Volgend project &rarr;</span><span lang="en">Next project &rarr;</span></a>
+    </nav>
+
+  </main>
+
+  <footer class="site-foot">
+    <div class="inner mono">
+      <span>&copy; <span id="year"></span> Thibault Verrue</span>
+      <span>Zwevegem, BE</span>
+      <span><span lang="nl">gebouwd met html + css + een canvas vol stippen</span><span lang="en">built with html + css + a canvas full of dots</span></span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/slim@3/tsparticles.slim.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

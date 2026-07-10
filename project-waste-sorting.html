@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-title-nl="Auto Recycler - Thibault Verrue" data-title-en="Auto Recycler - Thibault Verrue">Auto Recycler - Thibault Verrue</title>
+  <meta name="description"
+        data-title-nl="Automatische recyclagevuilbak: YOLOv8 op laptop, Raspberry Pi met servo, ultrasoonsensor en LCD."
+        data-title-en="Automatic recycling bin: YOLOv8 on a laptop driving a Raspberry Pi with servo, ultrasonic sensor and LCD."
+        content="Automatic recycling bin: YOLOv8 on a laptop driving a Raspberry Pi with servo, ultrasonic sensor and LCD." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M2 2h10 M2 2v10 M30 2h-10 M30 2v10 M2 30h10 M2 30v-10 M30 30h-10 M30 30v-10' stroke='%232B4BE6' stroke-width='4' fill='none'/><circle cx='16' cy='16' r='3' fill='%232B4BE6'/></svg>" />
+  <meta name="theme-color" content="#F3F5F4" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0A0E13" media="(prefers-color-scheme: dark)" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Auto Recycler - Thibault Verrue" />
+  <meta property="og:description" content="Automatic recycling bin: YOLOv8 on a laptop driving a Raspberry Pi with servo, ultrasonic sensor and LCD." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Auto Recycler" />
+  <meta name="twitter:description" content="Automatic recycling bin: YOLOv8 on a laptop driving a Raspberry Pi with servo, ultrasonic sensor and LCD." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+      var l = localStorage.getItem('lang') || (navigator.language && navigator.language.toLowerCase().startsWith('nl') ? 'nl' : 'en');
+      document.documentElement.setAttribute('lang', l);
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div id="tsparticles" aria-hidden="true"></div>
+
+  <header class="site-head">
+    <div class="bar">
+      <a class="logo" href="index.html">thibault<b>.verrue</b></a>
+      <div class="header-right">
+        <nav class="nav" id="nav">
+          <a href="index.html"><span lang="nl">Home</span><span lang="en">Home</span></a>
+          <a href="projects.html" aria-current="page"><span lang="nl">Projecten</span><span lang="en">Projects</span></a>
+          <a href="about.html"><span lang="nl">Over mij</span><span lang="en">About</span></a>
+          <a href="mailto:thibaultverrue@gmail.com">Contact</a>
+        </nav>
+        <button class="lang-toggle" data-aria-nl="Switch to English" data-aria-en="Overschakelen naar Nederlands" aria-label="Switch to English"><span lang="nl">EN</span><span lang="en">NL</span></button>
+        <button class="theme-toggle" data-aria-nl="Wissel tussen licht en donker" data-aria-en="Switch theme" aria-label="Wissel tussen licht en donker" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav" data-aria-nl="Menu openen" data-aria-en="Open menu">menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="project-hero">
+      <span class="mono eyebrow">// project.load("auto_recycler")</span>
+      <h1><span lang="nl">Auto Recycler</span><span lang="en">Auto Recycler</span></h1>
+      <p class="lead" style="margin-top:20px;"><span lang="nl">Een automatische recyclagevuilbak: een YOLOv8-model op een laptop herkent afval via de webcam (PMD, papier of restafval) en stuurt de klasse door naar een Raspberry Pi die het juiste deksel opent — maar alleen als een ultrasoonsensor ziet dat de bak nog niet vol zit.</span><span lang="en">An automatic recycling bin: a YOLOv8 model on a laptop identifies waste through the webcam (PMD, paper or residual) and forwards the class to a Raspberry Pi that opens the right lid — but only if an ultrasonic sensor confirms the bin isn't already full.</span></p>
+      <div class="meta-grid mono">
+        <div><span class="k"><span lang="nl">Rol</span><span lang="en">Role</span></span><span class="v"><span lang="nl">Solo developer</span><span lang="en">Solo developer</span></span></div>
+        <div><span class="k"><span lang="nl">Periode</span><span lang="en">Timeline</span></span><span class="v"><span lang="nl">mei - jun 2024</span><span lang="en">May - Jun 2024</span></span></div>
+        <div><span class="k"><span lang="nl">Context</span><span lang="en">Context</span></span><span class="v"><span lang="nl">Project One, bachelor CT &amp; AI (Howest)</span><span lang="en">Project One, bachelor CT &amp; AI (Howest)</span></span></div>
+        <div><span class="k">Stack</span><span class="v">YOLOv8, OpenCV, Raspberry Pi, BLE, I2C</span></div>
+      </div>
+      <div class="btn-row">
+        <a class="btn" href="https://github.com/ThibVerr/auto-recycler" target="_blank" rel="noopener"><span lang="nl">Broncode op GitHub</span><span lang="en">Source on GitHub</span></a>
+      </div>
+    </section>
+
+    <article class="prose">
+
+      <h2><span lang="nl">Het probleem</span><span lang="en">The problem</span></h2>
+      <p><span lang="nl">In België is afval sorteren verplicht, maar mensen zetten voortdurend het verkeerde in de verkeerde bak. Kon een camera, een klein model en wat hardware dat werk overnemen — zonder dat je nog hoeft na te denken bij het weggooien?</span><span lang="en">Waste sorting is mandatory in Belgium, but people constantly put the wrong item in the wrong bin. Could a camera, a small model and a bit of hardware take that off your hands — so you never have to think about it while throwing something away?</span></p>
+
+      <h2><span lang="nl">De aanpak</span><span lang="en">The approach</span></h2>
+      <ul>
+        <li><span lang="nl">Een eigen dataset opgebouwd en een YOLOv8-detector (Ultralytics) getraind op drie Belgische recyclageklassen: <em>PMD</em>, <em>Papier</em> en <em>Rest</em></span><span lang="en">Built a custom dataset and trained a YOLOv8 detector (Ultralytics) on three Belgian recycling classes: <em>PMD</em>, <em>Paper</em> and <em>Rest</em></span></li>
+        <li><span lang="nl">Real-time inference via de laptop-webcam met OpenCV, met live bounding boxes en confidence-scores op het beeld</span><span lang="en">Real-time inference on the laptop webcam via OpenCV, with live bounding boxes and confidence scores overlaid on the feed</span></li>
+        <li><span lang="nl">Twee communicatiekanalen gebouwd tussen laptop en Pi: een TCP-socket voor het lokale netwerk en een BLE-kanaal via Bleak (Nordic UART GATT-service) voor draadloze bediening</span><span lang="en">Two communication paths between laptop and Pi: a TCP socket for the local network, and a BLE channel via Bleak (Nordic UART GATT service) for wireless operation</span></li>
+        <li><span lang="nl">Op de Raspberry Pi: een HC-SR04 ultrasoonsensor meet hoe vol de doelbak is; als er minder dan 30 cm ruimte overblijft, blokkeert het systeem en geeft het een &ldquo;Please empty&rdquo;-melding in plaats van te overladen</span><span lang="en">On the Raspberry Pi: an HC-SR04 ultrasonic sensor measures how full the target bin is; if less than 30 cm of headroom remains, the system refuses to open and shows a &ldquo;Please empty&rdquo; message instead of overflowing</span></li>
+        <li><span lang="nl">Actuatie via een PCA9685 servo-driver: de servo opent het juiste deksel in een vloeiende beweging van 0° naar 140° en sluit na drie seconden terug</span><span lang="en">Actuation via a PCA9685 servo driver: the servo sweeps the correct lid open smoothly from 0° to 140° and closes again after three seconds</span></li>
+        <li><span lang="nl">Een 16x2 I2C-LCD (0x27) toont de gedetecteerde klasse of de vol-melding — visuele feedback zonder dat er een scherm bij hoeft</span><span lang="en">A 16x2 I2C LCD (0x27) shows the detected class or the full-bin warning — visual feedback with no separate screen needed</span></li>
+      </ul>
+    <figure class="figure">
+      <video controls preload="metadata" playsinline>
+        <source src="media/auto-recycler-demo.mp4" type="video/mp4" />
+        <span lang="nl">Je browser ondersteunt geen video-tag.</span><span lang="en">Your browser does not support the video tag.</span>
+      </video>
+      <figcaption class="mono"><span lang="nl">Demo: het systeem detecteert een stuk afval, controleert of de bak nog ruimte heeft en opent het juiste deksel.</span><span lang="en">Demo: the system detects a piece of waste, checks that the bin has room, and opens the right lid.</span></figcaption>
+    </figure>
+
+      <h2><span lang="nl">Het resultaat</span><span lang="en">The result</span></h2>
+      <p><span lang="nl">Een end-to-end werkende opstelling: je toont een stuk afval aan de camera, je drukt op spatie om te bevestigen, en het juiste deksel gaat open — tenzij die bak al vol zit, dan krijgt de gebruiker een leegmaak-melding op de LCD. Mijn eerste project waar AI, netwerken en fysieke hardware samenkomen in één werkende demo.</span><span lang="en">An end-to-end working setup: hold a piece of waste in front of the camera, press space to confirm, and the right lid opens — unless that bin is already full, in which case the user gets an "empty me" message on the LCD. My first project where AI, networking and physical hardware all came together into one working demo.</span></p>
+
+      <h2><span lang="nl">Wat ik geleerd heb</span><span lang="en">What I learned</span></h2>
+      <p><span lang="nl">Hardware trekt zich niets aan van je validatie-accuracy. Belichting, camerahoek en servotiming braken meer dan het model ooit deed, en threading tussen de webcam-loop en de asynchrone BLE-client was de eerste plek waar ik echt over concurrency moest nadenken. Het uiteindelijke systeem is bewust conservatief: liever weigeren te openen dan een bak laten overlopen.</span><span lang="en">Hardware doesn't care how good your validation accuracy is. Lighting, camera angle and servo timing broke more things than the model ever did, and the threading between the webcam loop and the async BLE client was the first place I really had to think about concurrency. The final system is deliberately conservative — better to refuse to open than to let a bin overflow.</span></p>
+
+    </article>
+
+    <nav class="pager mono">
+      <a href="projects.html"><span lang="nl">&larr; Alle projecten</span><span lang="en">&larr; All projects</span></a>
+      <a href="project-rag-assistant.html"><span lang="nl">Volgend project &rarr;</span><span lang="en">Next project &rarr;</span></a>
+    </nav>
+
+  </main>
+
+  <footer class="site-foot">
+    <div class="inner mono">
+      <span>&copy; <span id="year"></span> Thibault Verrue</span>
+      <span>Zwevegem, BE</span>
+      <span><span lang="nl">gebouwd met html + css + een canvas vol stippen</span><span lang="en">built with html + css + a canvas full of dots</span></span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/slim@3/tsparticles.slim.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

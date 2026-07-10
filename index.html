@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-title-nl="Thibault Verrue - AI Engineer" data-title-en="Thibault Verrue - AI Engineer">Thibault Verrue - AI Engineer</title>
+  <meta name="description"
+        data-title-nl="Portfolio van Thibault Verrue, junior AI engineer met focus op computer vision, edge AI en LLM-systemen."
+        data-title-en="Portfolio of Thibault Verrue, junior AI engineer focused on computer vision, edge AI and LLM systems."
+        content="Portfolio of Thibault Verrue, junior AI engineer focused on computer vision, edge AI and LLM systems." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M2 2h10 M2 2v10 M30 2h-10 M30 2v10 M2 30h10 M2 30v-10 M30 30h-10 M30 30v-10' stroke='%232B4BE6' stroke-width='4' fill='none'/><circle cx='16' cy='16' r='3' fill='%232B4BE6'/></svg>" />
+  <meta name="theme-color" content="#F3F5F4" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0A0E13" media="(prefers-color-scheme: dark)" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Thibault Verrue - AI Engineer" />
+  <meta property="og:description" content="Junior AI engineer building computer vision, edge AI and LLM systems that leave the notebook and run in the real world." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Thibault Verrue - AI Engineer" />
+  <meta name="twitter:description" content="Junior AI engineer building computer vision, edge AI and LLM systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+      var l = localStorage.getItem('lang') || (navigator.language && navigator.language.toLowerCase().startsWith('nl') ? 'nl' : 'en');
+      document.documentElement.setAttribute('lang', l);
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div id="tsparticles" aria-hidden="true"></div>
+
+  <!-- ====== HEADER (identical on every page, update aria-current) ====== -->
+  <header class="site-head">
+    <div class="bar">
+      <a class="logo" href="index.html">thibault<b>.verrue</b></a>
+      <div class="header-right">
+        <nav class="nav" id="nav">
+          <a href="index.html" aria-current="page"><span lang="nl">Home</span><span lang="en">Home</span></a>
+          <a href="projects.html"><span lang="nl">Projecten</span><span lang="en">Projects</span></a>
+          <a href="about.html"><span lang="nl">Over mij</span><span lang="en">About</span></a>
+          <a href="mailto:thibaultverrue@gmail.com">Contact</a>
+        </nav>
+        <button class="lang-toggle" data-aria-nl="Switch to English" data-aria-en="Overschakelen naar Nederlands" aria-label="Switch to English"><span lang="nl">EN</span><span lang="en">NL</span></button>
+        <button class="theme-toggle" data-aria-nl="Wissel tussen licht en donker" data-aria-en="Switch theme" aria-label="Wissel tussen licht en donker" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav" data-aria-nl="Menu openen" data-aria-en="Open menu">menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ====== HERO ====== -->
+    <section class="hero hero-grid wrap">
+      <div>
+        <span class="mono eyebrow">// portfolio.init()</span>
+        <h1>Thibault<br />Verrue<span class="accent">.</span></h1>
+
+        <div class="role-detect">
+          <span class="detect">
+            <span class="tick"></span>
+            <span class="detect-label">class: ai_engineer <span class="conf">conf 0.97</span></span>
+            <span class="mono" style="font-size:1rem;">Junior AI Engineer</span>
+          </span>
+        </div>
+
+        <div class="meta-row mono">
+          <span><span lang="nl">Zwevegem, België</span><span lang="en">Zwevegem, Belgium</span></span>
+          <span>CV + Edge AI + LLM systems</span>
+          <span class="dot-ok">&#9679; <span lang="nl">open voor opportuniteiten</span><span lang="en">open to opportunities</span></span>
+        </div>
+
+        <p class="lead">
+          <span lang="nl">Ik bouw AI-systemen die het notitieblok verlaten en draaien in de echte wereld: vision-modellen op embedded hardware, RAG-pipelines voor technici op de werkvloer, en multi-agent tools die mensen echt gebruiken.</span><span lang="en">I build AI systems that leave the notebook and run in the real world: vision models on embedded hardware, RAG pipelines for technicians on the factory floor, and multi-agent tools people actually use.</span>
+        </p>
+
+        <div class="btn-row" style="margin-top:32px;">
+          <a class="btn primary" href="projects.html"><span lang="nl">Bekijk projecten</span><span lang="en">View projects</span></a>
+          <a class="btn" href="about.html"><span lang="nl">Over mij</span><span lang="en">About me</span></a>
+          <a class="btn ghost" href="media/cv.pdf" download>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span lang="nl">Download CV</span><span lang="en">Download CV</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Your photo: drop an image in media/ and swap the placeholder div for
+           <img src="media/portrait.jpg" alt="Portrait of Thibault Verrue" /> -->
+      <div class="photo-frame">
+        <span class="tick"></span>
+        <span class="scan"></span>
+        <span class="detect-label">class: human <span class="conf">conf 1.00</span></span>
+        <div class="photo-ph mono"><img src="media/portrait.jpeg" alt="Portret van Thibault Verrue" data-alt-nl="Portret van Thibault Verrue" data-alt-en="Portrait of Thibault Verrue"></div>
+      </div>
+    </section>
+
+    <!-- ====== FEATURED PROJECTS ====== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="mono eyebrow">// detections: 3</span>
+            <h2><span lang="nl">Uitgelichte projecten</span><span lang="en">Featured projects</span></h2>
+          </div>
+        </div>
+
+        <div class="cards">
+
+          <a class="card reveal" href="project-rag-assistant.html">
+            <div class="thumb">
+              <img src="media/rag-assistant-thumb.png" alt="Technician RAG Assistant" data-alt-nl="Technician RAG Assistant" data-alt-en="Technician RAG Assistant">
+              <span class="detect-label">llm_system <span class="conf">0.98</span></span>
+            </div>
+            <div class="body">
+              <h3>Technician RAG Assistant</h3>
+              <p class="desc"><span lang="nl">Zelf-gehoste RAG-chatbot voor kraan- en hijstechnici: maatwerk multimodale PDF-ingestie, agentische retrieval met query-rewriting en bounded retry, geciteerde antwoorden met inline diagrammen. Live bij Cluma Rolbruggen.</span><span lang="en">Self-hosted RAG chatbot for crane and hoist technicians: custom multimodal PDF ingestion, agentic retrieval with query rewriting and bounded retry, cited answers with inline diagrams. Live at Cluma Rolbruggen.</span></p>
+              <div class="tags">
+                <span class="tag">RAG</span><span class="tag">Qdrant</span><span class="tag">Flowise</span><span class="tag">Docker</span><span class="tag">Vision</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="card reveal" href="project-waste-sorting.html">
+            <div class="thumb">
+              <img src="media/auto-recycler-thumb.jpg" alt="Auto Recycler in actie" data-alt-nl="Auto Recycler in actie" data-alt-en="Auto Recycler in action">
+              <span class="detect-label">cv_iot <span class="conf">0.93</span></span>
+            </div>
+            <div class="body">
+              <h3>Auto Recycler</h3>
+              <p class="desc"><span lang="nl">Automatische recyclagebak: YOLOv8 op laptop herkent PMD, papier of restafval en stuurt een Raspberry Pi aan die de juiste deksel opent — na controle dat de bak nog ruimte heeft.</span><span lang="en">Automatic recycling bin: YOLOv8 on a laptop identifies PMD, paper or residual waste and drives a Raspberry Pi that opens the right lid — after checking the bin has room.</span></p>
+              <div class="tags">
+                <span class="tag">YOLOv8</span><span class="tag">Raspberry Pi</span><span class="tag">BLE</span><span class="tag">I2C</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="card reveal" href="project-python-tutor.html">
+            <div class="thumb">
+              <img src="media/python-tutor-thumb.jpg" alt="Multi-Agent Python Tutor in Discord" data-alt-nl="Multi-Agent Python Tutor in Discord" data-alt-en="Multi-Agent Python Tutor in Discord">
+              <span class="detect-label">multi_agent <span class="conf">0.95</span></span>
+            </div>
+            <div class="body">
+              <h3>Multi-Agent Python Tutor</h3>
+              <p class="desc"><span lang="nl">Curriculum-bewuste AI-tutor als Discord-bot: multi-agent orchestratie die lesgeeft, oefeningen genereert, code beoordeelt en zich aanpast aan de leerling.</span><span lang="en">Curriculum-aware AI tutor as a Discord bot: multi-agent orchestration that teaches, generates exercises, grades code and adapts to the learner.</span></p>
+              <div class="tags">
+                <span class="tag">LangGraph</span><span class="tag">RAG</span><span class="tag">Discord API</span><span class="tag">LLMs</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+        <a class="more" href="projects.html" style="display:inline-block;margin-top:24px;"><span lang="nl">Alle projecten &rarr;</span><span lang="en">All projects &rarr;</span></a>
+      </div>
+    </section>
+
+    <!-- ====== SKILLS ====== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="mono eyebrow">// stack.list()</span>
+            <h2><span lang="nl">Waarmee ik werk</span><span lang="en">What I work with</span></h2>
+          </div>
+        </div>
+        <div class="skill-groups">
+          <div class="reveal">
+            <h3>AI / ML</h3>
+            <ul>
+              <li class="tag">Machine Learning</li><li class="tag">Deep Learning</li>
+              <li class="tag">Reinforcement Learning</li><li class="tag">NLP</li>
+              <li class="tag">LLMs / RAG</li>
+            </ul>
+          </div>
+          <div class="reveal">
+            <h3>Vision &amp; Edge AI</h3>
+            <ul>
+              <li class="tag">OpenCV</li><li class="tag">PyTorch</li><li class="tag">TensorFlow</li>
+              <li class="tag"><span lang="nl">Classificatie / detectie</span><span lang="en">Classification / detection</span></li><li class="tag">Quantization, pruning, ONNX</li>
+            </ul>
+          </div>
+          <div class="reveal">
+            <h3><span lang="nl">Embedded &amp; Systemen</span><span lang="en">Embedded &amp; Systems</span></h3>
+            <ul>
+              <li class="tag">Raspberry Pi / LIMO Pro</li><li class="tag">Linux / Bash</li>
+              <li class="tag"><span lang="nl">Camera- &amp; sensorintegratie</span><span lang="en">Camera &amp; sensor integration</span></li><li class="tag"><span lang="nl">Real-time inference</span><span lang="en">Real-time inference</span></li>
+            </ul>
+          </div>
+          <div class="reveal">
+            <h3><span lang="nl">Talen &amp; Tools</span><span lang="en">Languages &amp; Tools</span></h3>
+            <ul>
+              <li class="tag">Python</li><li class="tag">Java</li><li class="tag">C#</li>
+              <li class="tag">Docker</li><li class="tag">Git</li><li class="tag">Azure</li><li class="tag">Unity</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section class="section">
+      <div class="wrap contact-block">
+        <span class="mono eyebrow">// contact.open()</span>
+        <h2><span lang="nl">Laten we iets bouwen</span><span lang="en">Let's build something</span></h2>
+        <a class="big-link" href="mailto:thibaultverrue@gmail.com">thibaultverrue@gmail.com</a>
+        <div class="btn-row">
+          <a class="btn" href="https://www.linkedin.com/in/thibault-verrue-874312359/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/ThibVerr" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn ghost" href="media/cv.pdf" download>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span lang="nl">Download CV</span><span lang="en">Download CV</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER (identical on every page) ====== -->
+  <footer class="site-foot">
+    <div class="inner mono">
+      <span>&copy; <span id="year"></span> Thibault Verrue</span>
+      <span>Zwevegem, BE</span>
+      <span><span lang="nl">gebouwd met html + css + een canvas vol stippen</span><span lang="en">built with html + css + a canvas full of dots</span></span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/slim@3/tsparticles.slim.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

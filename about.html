@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-title-nl="Over mij - Thibault Verrue" data-title-en="About - Thibault Verrue">About - Thibault Verrue</title>
+  <meta name="description"
+        data-title-nl="Over Thibault Verrue: ervaring, opleiding en vaardigheden."
+        data-title-en="About Thibault Verrue: experience, education and skills."
+        content="About Thibault Verrue: experience, education and skills." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M2 2h10 M2 2v10 M30 2h-10 M30 2v10 M2 30h10 M2 30v-10 M30 30h-10 M30 30v-10' stroke='%232B4BE6' stroke-width='4' fill='none'/><circle cx='16' cy='16' r='3' fill='%232B4BE6'/></svg>" />
+  <meta name="theme-color" content="#F3F5F4" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0A0E13" media="(prefers-color-scheme: dark)" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About - Thibault Verrue" />
+  <meta property="og:description" content="Experience, education and skills of Thibault Verrue, junior AI engineer." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About - Thibault Verrue" />
+  <meta name="twitter:description" content="Experience, education and skills of Thibault Verrue." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+      var l = localStorage.getItem('lang') || (navigator.language && navigator.language.toLowerCase().startsWith('nl') ? 'nl' : 'en');
+      document.documentElement.setAttribute('lang', l);
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div id="tsparticles" aria-hidden="true"></div>
+
+  <header class="site-head">
+    <div class="bar">
+      <a class="logo" href="index.html">thibault<b>.verrue</b></a>
+      <div class="header-right">
+        <nav class="nav" id="nav">
+          <a href="index.html"><span lang="nl">Home</span><span lang="en">Home</span></a>
+          <a href="projects.html"><span lang="nl">Projecten</span><span lang="en">Projects</span></a>
+          <a href="about.html" aria-current="page"><span lang="nl">Over mij</span><span lang="en">About</span></a>
+          <a href="mailto:thibaultverrue@gmail.com">Contact</a>
+        </nav>
+        <button class="lang-toggle" data-aria-nl="Switch to English" data-aria-en="Overschakelen naar Nederlands" aria-label="Switch to English"><span lang="nl">EN</span><span lang="en">NL</span></button>
+        <button class="theme-toggle" data-aria-nl="Wissel tussen licht en donker" data-aria-en="Switch theme" aria-label="Wissel tussen licht en donker" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav" data-aria-nl="Menu openen" data-aria-en="Open menu">menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero wrap" style="padding-bottom:40px;">
+      <span class="mono eyebrow">// about.describe()</span>
+      <h1 style="font-size:clamp(2.6rem,6vw,4.8rem);"><span lang="nl">Over mij</span><span lang="en">About me</span></h1>
+      <p class="lead" style="margin-top:20px;">
+        <span lang="nl">Junior AI engineer uit Zwevegem, België. Ik hou van dat deel van AI dat de confrontatie met de echte wereld moet overleven: embedded hardware, fabrieksvloeren, echte gebruikers. Recent afgestudeerd in Creative Technologies and AI aan Howest, terwijl ik een LLM-systeem in productie hielp brengen.</span><span lang="en">Junior AI engineer from Zwevegem, Belgium. I like the part of AI where it has to survive contact with reality: embedded hardware, factory floors, real users. Recently graduated with a bachelor in Creative Technologies and AI at Howest while shipping an LLM system into production.</span>
+      </p>
+    </section>
+
+    <!-- ====== EXPERIENCE ====== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="mono eyebrow">// experience.log</span>
+            <h2><span lang="nl">Ervaring</span><span lang="en">Experience</span></h2>
+          </div>
+        </div>
+
+        <div class="timeline">
+
+          <div class="t-item reveal">
+            <span class="when mono"><span lang="nl">jul 2026 - aug 2026</span><span lang="en">Jul 2026 - Aug 2026</span></span>
+            <h3>Cluma Rolbruggen, Roeselare <span>&middot; AI Engineer</span></h3>
+            <ul>
+              <li><span lang="nl">Verdere ontwikkeling van mijn stageproject richting een productieklare oplossing</span><span lang="en">Continued development of my internship project toward a production-ready deployment</span></li>
+              <li><span lang="nl">Verbeterde betrouwbaarheid, performantie en onderhoudbaarheid van het systeem voor gebruik in de praktijk</span><span lang="en">Improved system reliability, performance and maintainability for real-world use</span></li>
+              <li><span lang="nl">Samengewerkt met engineers om de AI-oplossing in bestaande bedrijfsprocessen te integreren</span><span lang="en">Collaborated with engineers to integrate the AI solution into existing company workflows</span></li>
+            </ul>
+          </div>
+
+          <div class="t-item reveal">
+            <span class="when mono"><span lang="nl">feb 2026 - jun 2026</span><span lang="en">Feb 2026 - Jun 2026</span></span>
+            <h3>Cluma Rolbruggen, Roeselare <span>&middot; <span lang="nl">AI Stagiair</span><span lang="en">AI Intern</span></span></h3>
+            <ul>
+              <li><span lang="nl">Een document-gebaseerd LLM-systeem geïmplementeerd met RAG-architectuur, embeddings en semantische zoekfunctionaliteit</span><span lang="en">Implemented a document-grounded LLM system using RAG architecture with embeddings and semantic search</span></li>
+              <li><span lang="nl">Gestructureerde en ongestructureerde technische data (PDF, Excel, ERP) verwerkt tot een uniforme vector-kennisbank</span><span lang="en">Processed structured and unstructured technical data (PDF, Excel, ERP) into a unified vector knowledge base</span></li>
+              <li><span lang="nl">Een Python backend-API en interactieve chat-UI ontwikkeld voor real-time ondersteuning van technici</span><span lang="en">Developed a Python backend API and interactive chat UI for real-time technician support</span></li>
+              <li><span lang="nl">On-premise en cloud deployment-strategieën voor AI-inference verkend</span><span lang="en">Explored on-premise and cloud deployment strategies for AI inference</span></li>
+              <li><span lang="nl">Een productieklaar prototype opgeleverd dat de informatie-opzoeksnelheid van technici verbetert</span><span lang="en">Delivered a production-ready prototype improving technician information retrieval speed</span></li>
+            </ul>
+          </div>
+
+          <div class="t-item reveal">
+            <span class="when mono"><span lang="nl">jul 2025 - sep 2025</span><span lang="en">Jul 2025 - Sep 2025</span></span>
+            <h3>Barco, Kortrijk <span>&middot; <span lang="nl">Self-Supervised AI Training</span><span lang="en">Self-Supervised AI Training</span></span></h3>
+            <ul>
+              <li><span lang="nl">Self-supervised vision-modellen getraind op medische pathologie-datasets in PyTorch</span><span lang="en">Trained self-supervised vision models on medical pathology image datasets using PyTorch</span></li>
+              <li><span lang="nl">Downstream classificatie-performance geëvalueerd en datapijplijnen geoptimaliseerd in een Linux GPU-omgeving</span><span lang="en">Evaluated downstream classification performance and optimized data pipelines in a Linux GPU environment</span></li>
+            </ul>
+          </div>
+
+          <div class="t-item reveal">
+            <span class="when mono"><span lang="nl">mei 2023 - jun 2023</span><span lang="en">May 2023 - Jun 2023</span></span>
+            <h3>Bekaert, Zwevegem <span>&middot; <span lang="nl">IT Stagiair</span><span lang="en">IT Intern</span></span></h3>
+            <ul>
+              <li><span lang="nl">Nieuwe desktops en dockingstations geïnstalleerd voor medewerkers</span><span lang="en">Installed new desktops and docking stations for employees</span></li>
+              <li><span lang="nl">Python-scripts geconverteerd naar standalone executables</span><span lang="en">Converted Python scripts to standalone executables</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== EDUCATION + LANGUAGES ====== -->
+    <section class="section">
+      <div class="wrap split">
+        <div>
+          <span class="mono eyebrow">// education</span>
+          <h2 style="margin-bottom:32px;"><span lang="nl">Opleiding</span><span lang="en">Education</span></h2>
+          <div class="timeline">
+            <div class="t-item reveal">
+              <span class="when mono"><span lang="nl">sep 2023 - aug 2026</span><span lang="en">Sep 2023 - Aug 2026</span></span>
+              <h3>Creative Technologies and Artificial Intelligence, Howest <span>&middot; Bachelor</span></h3>
+            </div>
+            <div class="t-item reveal">
+              <span class="when mono"><span lang="nl">sep 2020 - jun 2023</span><span lang="en">Sep 2020 - Jun 2023</span></span>
+              <h3>IT Management, Guldensporencollege Kaai <span>&middot; <span lang="nl">TSO-diploma</span><span lang="en">TSO diploma</span></span></h3>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="mono eyebrow">// languages + extras</span>
+          <h2 style="margin-bottom:32px;"><span lang="nl">Talen</span><span lang="en">Languages</span></h2>
+          <div class="skill-groups" style="grid-template-columns:1fr;">
+            <div class="reveal">
+              <ul>
+                <li class="tag"><span lang="nl">Nederlands, moedertaal</span><span lang="en">Dutch, native</span></li>
+                <li class="tag"><span lang="nl">Engels, gevorderd</span><span lang="en">English, advanced</span></li>
+                <li class="tag"><span lang="nl">Frans, basis</span><span lang="en">French, basic</span></li>
+              </ul>
+            </div>
+            <div class="reveal">
+              <h3><span lang="nl">Ook goed om te weten</span><span lang="en">Also good to know</span></h3>
+              <ul>
+                <li class="tag"><span lang="nl">Rijbewijs B</span><span lang="en">Driver's license B</span></li>
+                <li class="tag"><span lang="nl">Gevestigd in Zwevegem, BE</span><span lang="en">Based in Zwevegem, BE</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section class="section">
+      <div class="wrap contact-block">
+        <span class="mono eyebrow">// contact.open()</span>
+        <h2><span lang="nl">Neem contact op</span><span lang="en">Get in touch</span></h2>
+        <a class="big-link" href="mailto:thibaultverrue@gmail.com">thibaultverrue@gmail.com</a>
+        <div class="btn-row">
+          <a class="btn primary" href="media/cv.pdf" download>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span lang="nl">Download CV</span><span lang="en">Download CV</span>
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/thibault-verrue-874312359/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/ThibVerr" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-foot">
+    <div class="inner mono">
+      <span>&copy; <span id="year"></span> Thibault Verrue</span>
+      <span>Zwevegem, BE</span>
+      <span><span lang="nl">gebouwd met html + css + een canvas vol stippen</span><span lang="en">built with html + css + a canvas full of dots</span></span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/slim@3/tsparticles.slim.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
