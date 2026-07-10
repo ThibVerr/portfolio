@@ -22,3 +22,6 @@ node_modules/
 
 # Local scratch
 _*/
+
+# Team-project source materials (kept local, not on public repo)
+/nextpro

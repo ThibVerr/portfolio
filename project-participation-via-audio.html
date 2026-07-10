@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-title-nl="Participation Via Audio - Thibault Verrue" data-title-en="Participation Via Audio - Thibault Verrue">Participation Via Audio - Thibault Verrue</title>
+  <meta name="description"
+        data-title-nl="Spraakgestuurde survey-webapp met Whisper, Llama 3.1 en SpaCy-anonimisatie op een Azure-backend."
+        data-title-en="Voice-driven survey web app with Whisper, Llama 3.1 and SpaCy anonymisation on an Azure backend."
+        content="Voice-driven survey web app with Whisper, Llama 3.1 and SpaCy anonymisation on an Azure backend." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M2 2h10 M2 2v10 M30 2h-10 M30 2v10 M2 30h10 M2 30v-10 M30 30h-10 M30 30v-10' stroke='%232B4BE6' stroke-width='4' fill='none'/><circle cx='16' cy='16' r='3' fill='%232B4BE6'/></svg>" />
+  <meta name="theme-color" content="#F3F5F4" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0A0E13" media="(prefers-color-scheme: dark)" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Participation Via Audio - Thibault Verrue" />
+  <meta property="og:description" content="Voice-driven survey web app with Whisper, Llama 3.1 and SpaCy anonymisation on an Azure backend." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Participation Via Audio" />
+  <meta name="twitter:description" content="Voice-driven survey web app with Whisper, Llama 3.1 and SpaCy anonymisation on an Azure backend." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+      var l = localStorage.getItem('lang') || (navigator.language && navigator.language.toLowerCase().startsWith('nl') ? 'nl' : 'en');
+      document.documentElement.setAttribute('lang', l);
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div id="tsparticles" aria-hidden="true"></div>
+
+  <header class="site-head">
+    <div class="bar">
+      <a class="logo" href="index.html">thibault<b>.verrue</b></a>
+      <div class="header-right">
+        <nav class="nav" id="nav">
+          <a href="index.html"><span lang="nl">Home</span><span lang="en">Home</span></a>
+          <a href="projects.html" aria-current="page"><span lang="nl">Projecten</span><span lang="en">Projects</span></a>
+          <a href="about.html"><span lang="nl">Over mij</span><span lang="en">About</span></a>
+          <a href="mailto:thibaultverrue@gmail.com">Contact</a>
+        </nav>
+        <button class="lang-toggle" data-aria-nl="Switch to English" data-aria-en="Overschakelen naar Nederlands" aria-label="Switch to English"><span lang="nl">EN</span><span lang="en">NL</span></button>
+        <button class="theme-toggle" data-aria-nl="Wissel tussen licht en donker" data-aria-en="Switch theme" aria-label="Wissel tussen licht en donker" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav" data-aria-nl="Menu openen" data-aria-en="Open menu">menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="project-hero">
+      <span class="mono eyebrow">// project.load("participation_via_audio")</span>
+      <h1>Participation Via Audio</h1>
+      <p class="lead" style="margin-top:20px;"><span lang="nl">Een spraakgestuurde survey-webapp voor jongeren die liever <em>praten</em> dan typen: de site leest vragen voor, transcribeert het antwoord real-time met Whisper, laat Llama 3.1 op basis van dat antwoord drie contextuele follow-up-vragen genereren, en anonimiseert namen en plaatsen met SpaCy voordat het antwoord in Azure Cosmos DB terechtkomt.</span><span lang="en">A voice-driven survey web app for young people who'd rather <em>speak</em> than type: the site reads questions aloud, transcribes answers in real time with Whisper, uses Llama 3.1 to generate three context-aware follow-up questions from that answer, and anonymises names and locations with SpaCy before the response lands in Azure Cosmos DB.</span></p>
+      <div class="meta-grid mono">
+        <div><span class="k"><span lang="nl">Rol</span><span lang="en">Role</span></span><span class="v"><span lang="nl">Team van 3 (Indy Laureys, Mies Van Den Berghe, Thibault Verrue)</span><span lang="en">Team of 3 (Indy Laureys, Mies Van Den Berghe, Thibault Verrue)</span></span></div>
+        <div><span class="k"><span lang="nl">Periode</span><span lang="en">Timeline</span></span><span class="v"><span lang="nl">jan 2025 (3 weken, ~275 uur)</span><span lang="en">Jan 2025 (3 weeks, ~275 hours)</span></span></div>
+        <div><span class="k"><span lang="nl">Context</span><span lang="en">Context</span></span><span class="v"><span lang="nl">End-term project, Howest CT &amp; AI</span><span lang="en">End-term project, Howest CT &amp; AI</span></span></div>
+        <div><span class="k">Stack</span><span class="v">FastAPI, Whisper, Llama 3.1, SpaCy, Azure Cosmos DB</span></div>
+      </div>
+      <div class="btn-row">
+        <a class="btn" href="https://github.com/ThibVerr/participation-via-audio" target="_blank" rel="noopener"><span lang="nl">Broncode op GitHub</span><span lang="en">Source on GitHub</span></a>
+      </div>
+    </section>
+
+    <figure class="figure">
+      <img src="media/participation-via-audio-thumb.jpg" alt="User flow diagram Participation Via Audio" data-alt-nl="User flow van welkom-scherm via survey en gegenereerde follow-up-vragen" data-alt-en="User flow from welcome screen through survey and generated follow-up questions">
+      <figcaption class="mono"><span lang="nl">User flow: welkom-scherm, consent, spraakvraag, en de drie door de LLM gegenereerde follow-up-vragen — elk met een eigen &ldquo;Start Recording&rdquo;.</span><span lang="en">User flow: welcome screen, consent, voice question, and the three LLM-generated follow-up questions — each with its own "Start Recording" button.</span></figcaption>
+    </figure>
+
+    <article class="prose">
+
+      <h2><span lang="nl">Het probleem</span><span lang="en">The problem</span></h2>
+      <p><span lang="nl">Jongeren van 12–24 vullen surveys slecht in. Typen is traag, aandacht is kort, en klassieke tekst-formulieren voelen als huiswerk. Hoe geef je hen toch een lage-drempel manier om hun mening te laten horen — over school, beleid, buurt — zonder dat het te veel moeite kost?</span><span lang="en">Young people aged 12–24 fill in surveys poorly. Typing is slow, attention is short, and classic text forms feel like homework. How do you still give them a low-friction way to be heard — on school, policy, neighbourhood topics — without it feeling like effort?</span></p>
+
+      <h2><span lang="nl">De aanpak</span><span lang="en">The approach</span></h2>
+      <p><span lang="nl">We bouwden een web-app waar de survey <em>gesproken</em> in en uit gaat. Text-to-speech leest elke vraag voor, de gebruiker antwoordt via de microfoon, en de flow is bewust volgorde-strikt zodat er nooit een moment is waarop de gebruiker moet nadenken over &ldquo;waar sta ik nu?&rdquo;</span><span lang="en">We built a web app where the survey goes in and out by <em>voice</em>. Text-to-speech reads each question aloud, the user answers through their microphone, and the flow is deliberately step-strict so there's never a moment where the user has to think about "where am I in this?"</span></p>
+      <p><span lang="nl">De AI-pijplijn achter de app:</span><span lang="en">The AI pipeline behind the app:</span></p>
+      <ul>
+        <li><span lang="nl"><strong>Whisper</strong> (OpenAI, via HuggingFace transformers) — real-time spraak-naar-tekst, 90 talen ondersteund. Model wordt bij server-start één keer geladen op de gekozen device (CPU of CUDA) en hergebruikt over alle requests.</span><span lang="en"><strong>Whisper</strong> (OpenAI, via HuggingFace transformers) — real-time speech-to-text, 90 languages supported. The model is loaded once at server startup on the chosen device (CPU or CUDA) and reused across all requests.</span></li>
+        <li><span lang="nl"><strong>Llama 3.1</strong> (via Ollama, open-source) — genereert drie context-bewuste follow-up-vragen uit het vorige antwoord, waardoor de survey aanvoelt als een gesprek in plaats van een checklist. Multilingual, met Nederlands én Engels als eerste-klasse talen.</span><span lang="en"><strong>Llama 3.1</strong> (via Ollama, open-source) — generates three context-aware follow-up questions from the previous answer, making the survey feel like a conversation rather than a checklist. Multilingual, with Dutch and English both first-class.</span></li>
+        <li><span lang="nl"><strong>SpaCy</strong> — NLP-anonimisatie op elke ingediende tekst voordat die de database bereikt. Filtert namen, plaatsen en andere PII eruit, zodat het antwoord bruikbaar blijft voor thematische analyse maar niet meer terug te leiden is tot een individuele respondent.</span><span lang="en"><strong>SpaCy</strong> — NLP anonymisation on every submitted response before it hits the database. Strips out names, locations and other PII, so answers stay usable for thematic analysis but no longer trace back to an individual respondent.</span></li>
+        <li><span lang="nl"><strong>Thematic analyzer</strong> — clustert antwoorden per survey achteraf op thema, zodat de admin-view patronen ziet in plaats van 200 losse zinnen.</span><span lang="en"><strong>Thematic analyzer</strong> — clusters answers per survey by theme after the fact, so the admin view shows patterns instead of 200 loose sentences.</span></li>
+      </ul>
+      <p><span lang="nl">Backend in Python / FastAPI, Azure Cosmos DB voor storage (aparte containers voor surveys en answers), Azure Blob Storage voor de audio-artefacten. Frontend in vanilla HTML/JS, gemount als static files onder FastAPI zelf — geen aparte build-step, geen framework. De taal van de app kan bij start op EN of NL gezet worden, maar antwoorden worden altijd in het Nederlands opgeslagen om de post-hoc analyse consistent te houden.</span><span lang="en">Backend in Python / FastAPI, Azure Cosmos DB for storage (separate containers for surveys and answers), Azure Blob Storage for the audio artefacts. Frontend in vanilla HTML/JS, mounted as static files under FastAPI itself — no separate build step, no framework. The app language can be set to EN or NL at session start, but answers are always stored in Dutch to keep post-hoc analysis consistent.</span></p>
+      <p><span lang="nl">Voor het samenwerken: Scrum (weekly sprints), Trello voor het board, en Toggl voor individuele tijdregistratie. Drie sprints van respectievelijk 67, 78 en 130 uur — de laatste week was de zware.</span><span lang="en">For collaboration: Scrum (weekly sprints), Trello for the board, and Toggl for individual time tracking. Three sprints of 67, 78 and 130 hours respectively — the last week was the heavy one.</span></p>
+
+      <h2><span lang="nl">Het resultaat</span><span lang="en">The result</span></h2>
+      <p><span lang="nl">Een werkende demo waarin een gebruiker een volledige survey volledig gesproken doorloopt: vragen worden voorgelezen, antwoorden getranscribeerd, follow-ups gegenereerd, alles samengevat op een review-scherm, en na bevestiging geanonimiseerd opgeslagen. User-testing bevestigde dat spraakinvoer de invultijd van surveys merkbaar verlaagt en voor de doelgroep intuïtief aanvoelt — met wat vertraging bij follow-up-generatie op piekmomenten als grootste verbeterpunt.</span><span lang="en">A working demo where a user runs through an entire survey by voice: questions are read aloud, answers are transcribed, follow-ups are generated, everything is summarised on a review screen, and after confirmation the response is anonymised and stored. User testing confirmed that voice input noticeably lowers survey-completion time and feels intuitive to the target audience — with some delay in follow-up generation during peak usage as the main pain point.</span></p>
+
+      <h2><span lang="nl">Wat ik geleerd heb</span><span lang="en">What I learned</span></h2>
+      <p><span lang="nl"><strong>Prompt-engineering is een echt vak.</strong> Onze eerste LLM-follow-ups waren onvoorspelbaar van kwaliteit — soms scherp, soms compleet naast de kwestie. Na veel iteratie op de prompt (met expliciete voorbeelden, harde regels over toon, en een extra stap om de Nederlandse output te fixen bij een model dat wankel Nederlands sprak) werd de output betrouwbaar. &ldquo;Beter model kiezen&rdquo; was de shortcut die niet werkte; &ldquo;prompt beter maken&rdquo; wel.</span><span lang="en"><strong>Prompt engineering is a real craft.</strong> Our first LLM follow-ups were wildly inconsistent — sometimes sharp, sometimes completely off-topic. After a lot of iteration on the prompt (explicit examples, hard rules on tone, and an extra step to fix the Dutch output on a model with wobbly Dutch) the output became reliable. "Pick a better model" was the shortcut that didn't work; "make the prompt better" did.</span></p>
+      <p><span lang="nl"><strong>Voice-first ontwerp verandert wat &ldquo;een goede UX&rdquo; betekent.</strong> Op een klassiek formulier kan de gebruiker altijd terugscrollen. Bij spraak kan dat niet zomaar — je moet expliciete review-momenten inbouwen, duidelijke bevestigingen, en de flow moet lineair en beperkt zijn. Een goed spraakscherm is <em>strikter</em> dan een goed formulier, niet losser.</span><span lang="en"><strong>Voice-first design changes what "good UX" means.</strong> In a classic form the user can always scroll back. With voice you can't — you have to build explicit review moments, clear confirmations, and the flow has to be linear and bounded. A good voice screen is <em>stricter</em> than a good form, not looser.</span></p>
+      <p><span lang="nl"><strong>Privacy-by-design werkt alleen als het niet optioneel is.</strong> De anonimisatie zit aan de <em>database-kant</em> van de submit-actie, niet in een user-toggle. Dat betekent dat de app geen "vergeet even de anonimisatie in te schakelen"-fout kán maken. Dat soort structurele beslissingen kost een dag extra werk en bespaart een categorie van bugs die later ontdekken pijnlijk is.</span><span lang="en"><strong>Privacy-by-design only works when it isn't optional.</strong> The anonymisation sits on the <em>database</em> side of the submit action, not behind a user toggle. That means the app <em>cannot</em> forget to anonymise. That kind of structural decision costs a day of extra work and saves a class of bugs that hurts a lot to find later.</span></p>
+      <p><span lang="nl"><strong>Scrum werkt wél als het team klein en gelijkwaardig is.</strong> Weekly retros waren kort en concreet, Trello was voldoende structuur, en Toggl gaf ons een eerlijk gesprek over wie waar op vast liep. Drie mensen, drie weken, één werkend product — mét een retrospective die niet over gefrustreerde teamleden ging.</span><span lang="en"><strong>Scrum actually works when the team is small and level.</strong> Weekly retros were short and concrete, Trello was enough structure, and Toggl gave us an honest conversation about who was blocked where. Three people, three weeks, one working product — with a retrospective that wasn't about frustrated teammates.</span></p>
+
+    </article>
+
+    <nav class="pager mono">
+      <a href="projects.html"><span lang="nl">&larr; Alle projecten</span><span lang="en">&larr; All projects</span></a>
+      <a href="project-waste-sorting.html"><span lang="nl">Volgend project &rarr;</span><span lang="en">Next project &rarr;</span></a>
+    </nav>
+
+  </main>
+
+  <footer class="site-foot">
+    <div class="inner mono">
+      <span>&copy; <span id="year"></span> Thibault Verrue</span>
+      <span>Zwevegem, BE</span>
+      <span><span lang="nl">gebouwd met html + css + een canvas vol stippen</span><span lang="en">built with html + css + a canvas full of dots</span></span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/slim@3/tsparticles.slim.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-title-nl="UWC Recruitment Analytics - Thibault Verrue" data-title-en="UWC Recruitment Analytics - Thibault Verrue">UWC Recruitment Analytics - Thibault Verrue</title>
+  <meta name="description"
+        data-title-nl="AI-gedreven recruitment-analyseplatform voor UWC met DeepSeek-R1 report cards, Cosmos DB, en dashboards voor de admissions team."
+        data-title-en="AI-driven recruitment analytics platform for UWC with DeepSeek-R1 report cards, Cosmos DB, and admissions dashboards."
+        content="AI-driven recruitment analytics platform for UWC with DeepSeek-R1 report cards, Cosmos DB, and admissions dashboards." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M2 2h10 M2 2v10 M30 2h-10 M30 2v10 M2 30h10 M2 30v-10 M30 30h-10 M30 30v-10' stroke='%232B4BE6' stroke-width='4' fill='none'/><circle cx='16' cy='16' r='3' fill='%232B4BE6'/></svg>" />
+  <meta name="theme-color" content="#F3F5F4" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0A0E13" media="(prefers-color-scheme: dark)" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="UWC Recruitment Analytics - Thibault Verrue" />
+  <meta property="og:description" content="AI-driven recruitment analytics platform for UWC with DeepSeek-R1 report cards, Cosmos DB, and admissions dashboards." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="UWC Recruitment Analytics" />
+  <meta name="twitter:description" content="AI-driven recruitment analytics platform for UWC with DeepSeek-R1 report cards, Cosmos DB, and admissions dashboards." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+      var l = localStorage.getItem('lang') || (navigator.language && navigator.language.toLowerCase().startsWith('nl') ? 'nl' : 'en');
+      document.documentElement.setAttribute('lang', l);
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div id="tsparticles" aria-hidden="true"></div>
+
+  <header class="site-head">
+    <div class="bar">
+      <a class="logo" href="index.html">thibault<b>.verrue</b></a>
+      <div class="header-right">
+        <nav class="nav" id="nav">
+          <a href="index.html"><span lang="nl">Home</span><span lang="en">Home</span></a>
+          <a href="projects.html" aria-current="page"><span lang="nl">Projecten</span><span lang="en">Projects</span></a>
+          <a href="about.html"><span lang="nl">Over mij</span><span lang="en">About</span></a>
+          <a href="mailto:thibaultverrue@gmail.com">Contact</a>
+        </nav>
+        <button class="lang-toggle" data-aria-nl="Switch to English" data-aria-en="Overschakelen naar Nederlands" aria-label="Switch to English"><span lang="nl">EN</span><span lang="en">NL</span></button>
+        <button class="theme-toggle" data-aria-nl="Wissel tussen licht en donker" data-aria-en="Switch theme" aria-label="Wissel tussen licht en donker" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav" data-aria-nl="Menu openen" data-aria-en="Open menu">menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="project-hero">
+      <span class="mono eyebrow">// project.load("uwc_recruitment_analytics")</span>
+      <h1>UWC Recruitment Analytics</h1>
+      <p class="lead" style="margin-top:20px;"><span lang="nl">Een AI-gedreven recruitment-analyseplatform voor de <em>UWC Future-Innovation Lab</em> aan de University of the Western Cape, gebouwd om ~1.700 sollicitaties per jaar om te zetten van verspreide Google Sheets in gecentraliseerde KPI's, AI-gegenereerde report cards per kandidaat, en cohort-vergelijkingen die de admissions team helpen om onderbouwde selectie-beslissingen te maken.</span><span lang="en">An AI-driven recruitment analytics platform for the <em>UWC Future-Innovation Lab</em> at the University of the Western Cape, built to turn ~1,700 annual applications from scattered Google Sheets into centralised KPIs, AI-generated report cards per candidate, and cohort comparisons that help the admissions team make evidence-based selection decisions.</span></p>
+      <div class="meta-grid mono">
+        <div><span class="k"><span lang="nl">Rol</span><span lang="en">Role</span></span><span class="v"><span lang="nl">Teamproject</span><span lang="en">Team project</span></span></div>
+        <div><span class="k"><span lang="nl">Periode</span><span lang="en">Timeline</span></span><span class="v"><span lang="nl">mrt - jun 2025</span><span lang="en">Mar - Jun 2025</span></span></div>
+        <div><span class="k"><span lang="nl">Context</span><span lang="en">Context</span></span><span class="v"><span lang="nl">Industry Project, Howest CT &amp; AI</span><span lang="en">Industry Project, Howest CT &amp; AI</span></span></div>
+        <div><span class="k">Stack</span><span class="v">C# / .NET 9, Azure Cosmos DB, Ollama (DeepSeek-R1 + Gemma 3), ChromaDB</span></div>
+      </div>
+      <div class="btn-row">
+        <a class="btn" href="https://github.com/ThibVerr/UWC-Recruitment-Analytics" target="_blank" rel="noopener"><span lang="nl">Broncode op GitHub</span><span lang="en">Source on GitHub</span></a>
+      </div>
+    </section>
+
+    <figure class="figure">
+      <img src="media/uwc-home.jpg" alt="Applicant Management dashboard" data-alt-nl="Applicant Management dashboard met pending AI analysis en scored applicanten" data-alt-en="Applicant Management dashboard showing pending AI analysis and scored applicants">
+      <figcaption class="mono"><span lang="nl">Applicant Management — de home van het platform. Nieuwe sollicitaties komen bovenaan in <em>Pending AI Analysis</em>, gescoorde kandidaten met hun voorspelde slagingskans in <em>AI Analysis Completed</em>.</span><span lang="en">Applicant Management — the platform home. New applications land in <em>Pending AI Analysis</em> at the top; scored candidates with their predicted pass probability sit in <em>AI Analysis Completed</em> below.</span></figcaption>
+    </figure>
+
+    <article class="prose">
+
+      <h2><span lang="nl">Het probleem</span><span lang="en">The problem</span></h2>
+      <p><span lang="nl">De UWC Future-Innovation Lab werkt met een applicant-flow die zich uitspreidt over losse Google Sheets, handmatige rapporten en een historisch dataset van vier jaar dat op de universiteitsservers verstopt zit. Ongeveer 1.700 sollicitaties per jaar, ~40 actieve studenten. De vraag van de klant (Wouter Grove): kunnen we die data samenbrengen, er zinnige metrics uit trekken, en per sollicitant een uitlegbaar "success score" genereren dat zowel de programma-afwerking als de <em>post-programme</em> uitkomst voorspelt — én dat transparant genoeg is om selectie-beslissingen mee te onderbouwen zonder over privacy heen te lopen?</span><span lang="en">The UWC Future-Innovation Lab runs an applicant flow spread across separate Google Sheets, manual reports, and four years of historical data buried on the university's servers. Roughly 1,700 applications per year, ~40 active students. The client's ask (Wouter Grove): can we centralise that data, pull meaningful metrics out of it, and generate an explainable "success score" per applicant that predicts both programme completion and <em>post-programme</em> outcomes — transparent enough to justify selection decisions without trampling privacy?</span></p>
+
+      <h2><span lang="nl">De aanpak</span><span lang="en">The approach</span></h2>
+
+      <h3 style="margin-top:24px;"><span lang="nl">Vierlagen-architectuur</span><span lang="en">Four-layer architecture</span></h3>
+      <p><span lang="nl">Het platform bestaat uit vier duidelijk afgebakende lagen:</span><span lang="en">The platform is built in four clearly bounded layers:</span></p>
+      <ol>
+        <li><span lang="nl"><strong>Web-frontend</strong> (vanilla HTML/CSS/JS met glassmorphism op UWC's huismerk-kleuren — donker cobalt <code>#003366</code> met goud <code>#DAA520</code>) — login, applicant management, JSON-upload, metrics-dashboard, en individuele AI-report pagina.</span><span lang="en"><strong>Web frontend</strong> (vanilla HTML/CSS/JS with glassmorphism on UWC's brand palette — deep cobalt <code>#003366</code> with gold <code>#DAA520</code>) — login, applicant management, JSON upload, metrics dashboard, and per-candidate AI report page.</span></li>
+        <li><span lang="nl"><strong>ASP.NET Core 9 backend</strong> — controllers voor auth en applicant-CRUD, services voor AI-reporting en metrics, repositories tegen Cosmos DB, en Docker Compose voor local development.</span><span lang="en"><strong>ASP.NET Core 9 backend</strong> — controllers for auth and applicant CRUD, services for AI reporting and metrics, repositories against Cosmos DB, and Docker Compose for local development.</span></li>
+        <li><span lang="nl"><strong>Azure Cosmos DB</strong> — twee containers (<code>Applicants</code> en <code>AIReports</code>), gestructureerde JSON-storage voor de sollicitatiedata en de gegenereerde rapporten, zodat elk rapport later heropgehaald of geregenereerd kan worden.</span><span lang="en"><strong>Azure Cosmos DB</strong> — two containers (<code>Applicants</code> and <code>AIReports</code>), structured JSON storage for the application data and the generated reports, so each report can be re-fetched or regenerated later.</span></li>
+        <li><span lang="nl"><strong>Lokale AI-laag via Ollama</strong> — twee modellen, elk voor een ander doel (zie hieronder). Bewust lokaal en niet cloud, zodat sollicitantendata het lab niet hoeft te verlaten voor de LLM-analyse.</span><span lang="en"><strong>Local AI layer via Ollama</strong> — two models, each for a distinct purpose (see below). Deliberately local, not cloud, so applicant data never has to leave the lab for the LLM analysis.</span></li>
+      </ol>
+
+      <figure class="figure">
+        <img src="media/uwc-upload.jpg" alt="Upload JSON File page" data-alt-nl="Upload-scherm voor JSON-bestanden met drag-and-drop" data-alt-en="JSON upload page with drag-and-drop">
+        <figcaption class="mono"><span lang="nl">JSON-upload: valideert het formaat, telt hoeveel sollicitaties er in het bestand zitten, en importeert alles in één klik naar Cosmos DB.</span><span lang="en">JSON upload: validates the format, counts how many applications are in the file, and imports everything into Cosmos DB in one click.</span></figcaption>
+      </figure>
+
+      <h3 style="margin-top:24px;"><span lang="nl">De twee AI-stappen</span><span lang="en">The two AI stages</span></h3>
+      <p><span lang="nl">Elk report card wordt in twee stappen samengesteld, met twee verschillende lokale modellen — elk voor wat het goed doet:</span><span lang="en">Each report card is assembled in two steps, using two different local models — each for what it's good at:</span></p>
+      <ul>
+        <li><span lang="nl"><strong>Gemma 3</strong> — draait bij het openen van het report en levert een <em>motivation analysis</em> plus drie extra performance-metrics (academic score, tech experience, digital literacy, motivation fit). Kort, gestructureerd, sneller dan de zware analyse. Dat maakt de eerste render van het report snel.</span><span lang="en"><strong>Gemma 3</strong> — runs when the report opens and produces a <em>motivation analysis</em> plus three additional performance metrics (academic score, tech experience, digital literacy, motivation fit). Short, structured, faster than the heavy analysis. Keeps the first render of the report snappy.</span></li>
+        <li><span lang="nl"><strong>DeepSeek-R1</strong> (via een RAG-pipeline over ChromaDB) — genereert de eigenlijke <em>Candidate Fit Analysis</em>: een probabiliteitsscore voor slagen, een narratieve analyse van de sterktes en groeidomeinen, en een concrete uitleg <em>waarom</em> die score zo is. Retrieval-augmented, want de klant vroeg expliciet om uitlegbaarheid — de LLM moet z'n conclusie kunnen onderbouwen met de eigen tekst-antwoorden van de kandidaat.</span><span lang="en"><strong>DeepSeek-R1</strong> (via a RAG pipeline over ChromaDB) — generates the actual <em>Candidate Fit Analysis</em>: a pass probability score, a narrative analysis of strengths and growth areas, and a concrete explanation of <em>why</em> the score came out that way. Retrieval-augmented because the client explicitly asked for explainability — the LLM has to justify its conclusion using the candidate's own text answers.</span></li>
+      </ul>
+      <p><span lang="nl">Twaalf velden uit de sollicitatiedata bleken (na verkennende modelering) de sterkste voorspellende waarde te hebben: burgerschap, hoogste kwalificatie, hoogste wiskunde-niveau, hoogste wetenschap-niveau, software development-ervaring, digitale geletterdheid, motivatie-verklaring, carrière-aspiraties, full-time-beschikbaarheid, leeftijd, geslacht, en de open-text velden. Tekstvelden gaan door de embedding-pipeline naar ChromaDB; categorische en numerieke velden worden one-hot encoded of geschaald voor de scoring-fase.</span><span lang="en">Twelve fields from the application data turned out (after exploratory modelling) to carry the strongest predictive weight: citizenship, highest qualification, highest maths level, highest science level, software development experience, digital literacy, motivation statement, career aspirations, full-time availability, age, gender, and the open-text fields. Text fields go through the embedding pipeline into ChromaDB; categorical and numeric fields are one-hot encoded or scaled for the scoring stage.</span></p>
+
+      <figure class="figure">
+        <img src="media/uwc-report.jpg" alt="AI Recruitment Report per applicant" data-alt-nl="AI Recruitment Report card met probability score en performance metrics" data-alt-en="AI Recruitment Report card with probability score and performance metrics">
+        <figcaption class="mono"><span lang="nl">Report card per kandidaat: probability score, vier performance-metrics van Gemma 3, en de DeepSeek-R1 narrative met sterktes, growth areas en uitleg. Onderaan: <em>Regenerate</em> en <em>Download</em>.</span><span lang="en">Per-candidate report card: probability score, four performance metrics from Gemma 3, and the DeepSeek-R1 narrative with strengths, growth areas and explanation. Bottom: <em>Regenerate</em> and <em>Download</em>.</span></figcaption>
+      </figure>
+
+      <h3 style="margin-top:24px;"><span lang="nl">Metrics + cohort-vergelijking</span><span lang="en">Metrics + cohort comparison</span></h3>
+      <p><span lang="nl">Naast de individuele report cards levert een aparte <em>Student Metrics</em> dashboard hoog-niveau inzichten: total applications, gemiddelde en hoogste AI-score, percentage SA citizens, score distribution, education levels, programme applications per cohort, en applications over time. De cohort-filter is er expliciet in gezet omdat de klant tijdens meeting 2 vroeg om visuals die groepen kunnen vergelijken — belangrijk voor het aantonen van de programma-impact aan de universiteit en aan financiers.</span><span lang="en">Beyond individual report cards, a separate <em>Student Metrics</em> dashboard delivers high-level insight: total applications, average and highest AI score, percentage SA citizens, score distribution, education levels, programme applications per cohort, and applications over time. The cohort filter was added explicitly because the client asked in meeting 2 for visuals that could compare groups — important for showing programme impact to the university and funders.</span></p>
+
+      <figure class="figure">
+        <img src="media/uwc-metrics.jpg" alt="Student Metrics dashboard" data-alt-nl="Student Metrics dashboard met KPI-tegels, donut-grafiek en top-performers" data-alt-en="Student Metrics dashboard with KPI tiles, donut chart, and top performers">
+        <figcaption class="mono"><span lang="nl">Student Metrics — KPI-tegels bovenaan, distributie- en cohort-visualisaties in het midden, top-performers-tabel onderaan met direct-linkende <em>View Report</em> knoppen.</span><span lang="en">Student Metrics — KPI tiles up top, distribution and cohort visualisations in the middle, top-performers table at the bottom with direct-linking <em>View Report</em> buttons.</span></figcaption>
+      </figure>
+
+      <h3 style="margin-top:24px;"><span lang="nl">Werkproces met de klant</span><span lang="en">Working with the client</span></h3>
+      <p><span lang="nl">Vijf geplande client-meetings met Wouter Grove en Frederik. Meeting 1 legde de scope en de tech-stack vast (C#/.NET/Azure, GDPR verplicht bij elke stap). Meeting 2 lockte de expliciete eis van uitlegbaarheid en cohort-filters. Meeting 3 clarifieerde de data-dictionary (wat betekent bijvoorbeeld het "DSI final mark"?). Meeting 4 gaf approval op de JSON-upload flow en de MVP metrics-lijst. Meeting 5 kwam er niet, de klant reageerde niet meer — we hebben het eindresultaat via e-mail bezorgd met een begeleidende doc.</span><span lang="en">Five client meetings scheduled with Wouter Grove and Frederik. Meeting 1 locked scope and tech stack (C#/.NET/Azure, GDPR at every step). Meeting 2 locked the explicit requirement for explainability and cohort filters. Meeting 3 clarified the data dictionary (e.g. what "DSI final mark" actually means). Meeting 4 signed off the JSON upload flow and the MVP metrics list. Meeting 5 never happened — the client stopped responding, so we delivered the final project by email with an accompanying document.</span></p>
+
+      <h2><span lang="nl">Het resultaat</span><span lang="en">The result</span></h2>
+      <p><span lang="nl">Een werkende prototype-deployment die het volledige applicant-lifecycle afdekt: JSON-upload → Cosmos-storage → AI-scoring in twee stappen → dashboards + downloadable report cards. Elke rapport-generatie is idempotent (regenerate verwijdert de oude entry en schrijft een nieuwe, zodat de dataset consistent blijft). Client-feedback in meeting 4: <em>&ldquo;didn't have any remarks or things to change, satisfied with progress&rdquo;</em>. Later friends-and-family testing bevestigde dat de UI intuïtief was, met wat model-latency op piekmomenten als voornaamste UX-punt — dat had UWC's Azure-subscription kunnen fixen, maar die was nog niet operationeel toen we opleverden.</span><span lang="en">A working prototype deployment covering the full applicant lifecycle: JSON upload → Cosmos storage → two-stage AI scoring → dashboards + downloadable report cards. Every report generation is idempotent (regenerate deletes the old entry and writes a new one, keeping the dataset consistent). Client feedback in meeting 4: <em>"didn't have any remarks or things to change, satisfied with progress"</em>. Later friends-and-family testing confirmed the UI was intuitive, with model latency at peak moments as the main UX pain point — that would have been fixed by UWC's Azure subscription, but it wasn't provisioned in time for delivery.</span></p>
+
+      <h2><span lang="nl">Wat ik geleerd heb</span><span lang="en">What I learned</span></h2>
+      <p><span lang="nl"><strong>Uitlegbaarheid is geen extraatje, het is de opdracht.</strong> Bij een client die letterlijk moet kunnen verantwoorden waarom kandidaat A boven kandidaat B werd verkozen, is een score-getal zonder onderbouwing onbruikbaar. Dat sturde de keuze voor DeepSeek-R1 met RAG in plaats van een classic ML-classifier: het rapport moet <em>argumenteren</em>, niet alleen scoren. Elke architectuurbeslissing die daarmee botste (bv. een sneller model dat geen coherent verhaal genereert) verloor het van de eis.</span><span lang="en"><strong>Explainability isn't an add-on, it's the brief.</strong> With a client that literally has to justify why candidate A was picked over candidate B, a bare score without reasoning is useless. That drove the choice for DeepSeek-R1 with RAG over a classic ML classifier: the report has to <em>argue</em>, not just score. Every architectural decision that clashed with that requirement (e.g. a faster model that couldn't produce a coherent narrative) lost against it.</span></p>
+      <p><span lang="nl"><strong>Twee modellen, twee rollen.</strong> De keuze om Gemma 3 en DeepSeek-R1 naast elkaar te draaien in plaats van één model voor alles was in eerste instantie een performance-truc, maar bleek een architecturaal patroon: gebruik een klein en snel model voor de dingen die tijdens het openen van de pagina moeten gebeuren, gebruik een zwaar model voor de dingen waar de kwaliteit echt telt. Same LLM-ecosysteem (Ollama), verschillende gewichtsklassen.</span><span lang="en"><strong>Two models, two roles.</strong> The choice to run Gemma 3 and DeepSeek-R1 side by side rather than one model for everything started as a performance trick but turned out to be a real architectural pattern: use a small, fast model for the things that have to happen when the page opens, use a heavy model for the things where quality actually matters. Same LLM ecosystem (Ollama), different weight classes.</span></p>
+      <p><span lang="nl"><strong>Client-cadans bepaalt scope.</strong> De vijf meetings waren zowel een deadline-generator als een scope-anker. Elke meeting had één beslissing die daarna vast lag: tech stack, uitlegbaarheids-eis, data-definities, MVP-metrics. Toen meeting 5 wegviel, hadden we al genoeg beslissingen om zelfstandig door te bouwen — maar het maakte ook duidelijk dat een team dat afhankelijk is van client-response een <em>plan B</em> voor go/no-go beslissingen nodig heeft.</span><span lang="en"><strong>Client cadence sets scope.</strong> The five meetings were both a deadline generator and a scope anchor. Each meeting locked in one decision: tech stack, explainability requirement, data definitions, MVP metrics. When meeting 5 dropped off, we already had enough decisions to keep building — but it also made clear that a team dependent on client response needs a <em>plan B</em> for go/no-go decisions.</span></p>
+      <p><span lang="nl"><strong>GDPR is een ontwerp-input, niet een compliance-checkbox.</strong> "Alle data blijft bij UWC" en "geen sollicitanten-data naar cloud-LLMs" waren geen constraints die achteraf werden toegevoegd — ze bepaalden vanaf dag één dat Ollama lokaal draaide, dat we niet naar OpenAI konden reiken voor snelheid, en dat de deployment-strategie een private VM was in plaats van een SaaS. Als je die keuze pas tijdens de review-fase maakt, moet je de helft van de architectuur herbouwen.</span><span lang="en"><strong>GDPR is a design input, not a compliance checkbox.</strong> "All data stays with UWC" and "no applicant data goes to cloud LLMs" weren't constraints tacked on afterwards — they decided from day one that Ollama would run locally, that we couldn't reach for OpenAI for speed, and that the deployment strategy was a private VM rather than a SaaS. Make that call at review time instead of at design time, and you rebuild half of the architecture.</span></p>
+
+    </article>
+
+    <nav class="pager mono">
+      <a href="projects.html"><span lang="nl">&larr; Alle projecten</span><span lang="en">&larr; All projects</span></a>
+      <a href="project-participation-via-audio.html"><span lang="nl">Volgend project &rarr;</span><span lang="en">Next project &rarr;</span></a>
+    </nav>
+
+  </main>
+
+  <footer class="site-foot">
+    <div class="inner mono">
+      <span>&copy; <span id="year"></span> Thibault Verrue</span>
+      <span>Zwevegem, BE</span>
+      <span><span lang="nl">gebouwd met html + css + een canvas vol stippen</span><span lang="en">built with html + css + a canvas full of dots</span></span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/slim@3/tsparticles.slim.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
