@@ -111,6 +111,22 @@ if (!reduce && "IntersectionObserver" in window) {
 const y = document.querySelector("#year");
 if (y) y.textContent = new Date().getFullYear();
 
+// ---------- copy-email buttons ----------
+document.querySelectorAll(".copy-email").forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    const email = btn.dataset.email || "";
+    if (!email) return;
+    try {
+      await navigator.clipboard.writeText(email);
+      btn.classList.add("copied");
+      btn.setAttribute("aria-live", "polite");
+      setTimeout(() => btn.classList.remove("copied"), 1600);
+    } catch (e) {
+      window.location.href = "mailto:" + email;
+    }
+  });
+});
+
 // ---------- horizontal project rails ----------
 document.querySelectorAll(".rail-wrap").forEach((wrap) => {
   const rail = wrap.querySelector(".rail");
