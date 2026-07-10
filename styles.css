@@ -416,18 +416,18 @@ html[lang="en"] [lang="nl"]{ display:none !important; }
 
 /* ---------- responsive ---------- */
 
-/* tablet + mobile — nav collapses, general vertical rhythm tightens */
+/* tablet + mobile — nav collapses, vertical rhythm tightens, side padding grows */
 @media (max-width: 760px){
-  .wrap{ padding:0 20px; }
+  .wrap{ padding:0 28px; }
 
-  .site-head .bar{ padding:14px 20px; }
+  .site-head .bar{ padding:16px 28px; }
   .header-right{ gap:10px; }
   .nav{
     display:none;
     position:absolute; top:100%; left:0; right:0;
     flex-direction:column; gap:0;
     background:var(--panel); border-bottom:1px solid var(--line);
-    padding:8px 20px 16px;
+    padding:8px 28px 16px;
   }
   .nav.open{ display:flex; }
   .nav a{ padding:12px 0; border-bottom:none; }
@@ -439,7 +439,7 @@ html[lang="en"] [lang="nl"]{ display:none !important; }
   .hero{ padding:56px 0 40px; }
   .lead{ font-size:1.05rem; }
   .cards{ gap:20px; }
-  .card .body{ padding:18px 18px 22px; }
+  .card .body{ padding:20px 20px 22px; }
 
   /* project detail pages */
   .project-hero{ padding:56px 0 32px; }
@@ -456,13 +456,42 @@ html[lang="en"] [lang="nl"]{ display:none !important; }
 
   /* footer */
   .site-foot{ margin-top:48px; }
-  .site-foot .inner{ padding:24px 20px; gap:6px 24px; }
+  .site-foot .inner{ padding:24px 28px; gap:6px 24px; }
+
+  /* photo frame — centre on mobile so it doesn't hug the left edge */
+  .photo-frame{ justify-self:center; margin:0 auto; }
+
+  /* hero content — centre so text doesn't cling to the left edge either */
+  .hero-grid > div:first-child{ text-align:center; }
+  .hero-grid h1{ text-align:center; }
+  .hero-grid .lead{ margin-left:auto; margin-right:auto; }
+  .hero-grid .meta-row{ justify-content:center; }
+  .hero-grid .btn-row{ justify-content:center; }
+  .hero-grid .role-detect{ display:flex; justify-content:center; }
+  .hero-grid .eyebrow{ text-align:center; }
+
+  /* project-hero content — same treatment for consistency */
+  .project-hero{ text-align:center; }
+  .project-hero .lead{ margin-left:auto; margin-right:auto; }
+  .project-hero .btn-row{ justify-content:center; }
+
+  /* other pages' short heros (about, projects listing) */
+  .hero:not(.hero-grid){ text-align:center; }
+  .hero:not(.hero-grid) .lead{ margin-left:auto; margin-right:auto; }
+  .hero:not(.hero-grid) .btn-row{ justify-content:center; }
+
+  /* section heads with an eyebrow + h2 stay centered too */
+  .section-head{ text-align:center; justify-content:center; }
+
+  /* contact block reads better centred on mobile */
+  .contact-block{ text-align:center; }
+  .contact-block .btn-row{ justify-content:center; }
 }
 
-/* small phones — tighten header, drop wrap padding, kill big margins */
+/* small phones — keep breathing room, only shrink chrome that has to shrink */
 @media (max-width: 480px){
-  .wrap{ padding:0 16px; }
-  .site-head .bar{ padding:12px 16px; }
+  .wrap{ padding:0 22px; }
+  .site-head .bar{ padding:14px 22px; }
   .header-right{ gap:8px; }
   .theme-toggle{ width:34px; height:34px; }
   .theme-toggle svg{ width:16px; height:16px; }
@@ -480,7 +509,8 @@ html[lang="en"] [lang="nl"]{ display:none !important; }
   .project-hero h1{ font-size:clamp(2rem, 8vw, 3rem); }
   h2{ font-size:clamp(1.5rem, 5vw, 2rem); }
 
-  .site-foot .inner{ padding:20px 16px; flex-direction:column; align-items:flex-start; }
+  .nav{ padding:8px 22px 16px; }
+  .site-foot .inner{ padding:20px 22px; flex-direction:column; align-items:flex-start; }
   .pager{ font-size:0.72rem; }
 }
 
